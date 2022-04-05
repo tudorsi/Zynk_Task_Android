@@ -2,6 +2,7 @@ package com.zynksoftware.futureup.network
 
 import com.squareup.moshi.Moshi
 import com.zynksoftware.futureup.BuildConfig
+import com.zynkxsoftware.futureup.network.ApiService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
