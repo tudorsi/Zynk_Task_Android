@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_dialog"
+    >
+
+        <!--TODO: make round corners -->
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/rounded_dialog"
+            android:layout_margin="10dp"
+
+            >
+            <TextView
+                android:id="@+id/coinNameTextView"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                tools:text="Ethereum description"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/close_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fabCustomSize="30dp"
+                android:backgroundTint="#FD3C72"
+                android:src="@drawable/ic_clear" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#3F3F3F"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas integer eget aliquet nibh praesent. Nibh mauris cursus mattis molestie. Erat nam at lectus urna duis convallis convallis. Orci nulla pellentesque dignissim enim sit amet. Quisque sagittis purus sit amet volutpat consequat. Ut sem nulla pharetra diam. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu. Euismod in pellentesque massa placerat duis ultricies lacus sed turpis. Lorem ipsum dolor sit amet consectetur. Adipiscing elit pellentesque habitant morbi tristique senectus et netus et. Nulla pharetra diam sit amet nisl suscipit adipiscing. Imperdiet nulla malesuada pellentesque elit. Ornare lectus sit amet est."/>
+
+        </ScrollView>
+
+
+</LinearLayout>

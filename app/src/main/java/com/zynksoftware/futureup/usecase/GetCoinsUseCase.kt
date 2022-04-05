@@ -11,4 +11,6 @@ class GetCoinsUseCase(private val repository: Repository) {
         val response = repository.getCoins()
         emit(response)
     }
+
+
 }

@@ -37,6 +37,8 @@ class WalletViewModel(
         }
     }
 
+
+
     fun getTotalBalance(): String {
         return getTotalBalanceUseCase.getTotalBalance().toString()
     }

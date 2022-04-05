@@ -1,4 +1,4 @@
-package com.zynksoftware.futureup.network
+package com.zynkxsoftware.futureup.network
 
 import com.zynksoftware.futureup.models.CryptoModel
 import retrofit2.Response

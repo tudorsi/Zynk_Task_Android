@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.zynksoftware.futureup.R
 import com.zynksoftware.futureup.databinding.FragmentWalletBinding
@@ -16,7 +17,9 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class WalletFragment : Fragment() {
 
+
     private var binding: FragmentWalletBinding? = null
+    var coinModelName: String? = null
 
     private val viewModel: WalletViewModel by viewModel()
 
@@ -35,7 +38,14 @@ class WalletFragment : Fragment() {
         binding?.recyclerView?.layoutManager = LinearLayoutManager(requireContext())
 
         viewModel.coinsLiveData.observe(viewLifecycleOwner) { items ->
-            val adapter = CryptoAdapter(items)
+            val adapter = CryptoAdapter(items){
+                coinModelName = it.name
+                val fm: FragmentManager = childFragmentManager
+                val descriptionDiaog = DescriptionDialogFragment("${it.name} description")
+                descriptionDiaog.show(fm,"description")
+                //TODO:get the description
+
+            }
             binding?.recyclerView?.adapter = adapter
         }
 
@@ -63,4 +73,6 @@ class WalletFragment : Fragment() {
         binding?.hash4?.text = getString(R.string.card_number)
         binding?.holderNameTextView?.text = PortfolioUtils.getDeviceName()
     }
+
+
 }

@@ -26,4 +26,6 @@
     <color name="gray_backgroud">#fafcff</color>
     <color name="button_color">#7472DE</color>
 
+    <color name="transparent">#00000000 </color>
+
 </resources>

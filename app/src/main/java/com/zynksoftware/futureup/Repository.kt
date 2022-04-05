@@ -1,10 +1,11 @@
 package com.zynksoftware.futureup
 
+import com.zynksoftware.futureup.models.CryptoDescription
 import com.zynksoftware.futureup.models.CryptoModel
 import com.zynksoftware.futureup.models.PortfolioCoinModel
-import com.zynksoftware.futureup.network.ApiService
 import com.zynksoftware.futureup.network.RemoteServicesHandler
 import com.zynksoftware.futureup.network.Resource
+import com.zynkxsoftware.futureup.network.ApiService
 import java.util.ArrayList
 
 class Repository(
@@ -32,6 +33,7 @@ class Repository(
             },
             mapSuccess = { Resource.Success(it.body(), it.code()) }
         )
+
 
     fun getPortfolioCoinsFromDb(): ArrayList<PortfolioCoinModel> {
         return portfolioCoins
